@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Process Steps Widget Demo</title>
+    <link rel="stylesheet" type="text/css" href="../process-steps.css">
+    <link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+<body>
+    <h2>Basic</h2>
+    <ul class="process-steps" data-steps="6">
+        <li class="previous">
+            <span>1</span>
+        </li>
+        <li class="previous">
+            <span>2</span>
+        </li>
+        <li class="active">
+            <span>3</span>
+        </li>
+        <li>
+            <span>4</span>
+        </li>
+        <li>
+            <span>5</span>
+        </li>
+        <li>
+            <span>6</span>
+        </li>
+    </ul>
+
+    <h2>Basic - different number of steps</h2>
+    <ul class="process-steps" data-steps="4">
+        <li class="previous">
+            <span>1</span>
+        </li>
+        <li class="previous">
+            <span>2</span>
+        </li>
+        <li class="active">
+            <span>3</span>
+        </li>
+        <li>
+            <span>4</span>
+        </li>
+    </ul>
+
+    <h2>Animated - page load</h2>
+    <ul class="process-steps" data-steps="5" id="processAnimated">
+        <li class="previous">
+            <span>1</span>
+        </li>
+        <li class="previous animate">
+            <span>2</span>
+        </li>
+        <li class="active animate">
+            <span>3</span>
+        </li>
+        <li>
+            <span>4</span>
+        </li>
+        <li>
+            <span>5</span>
+        </li>
+    </ul>
+
+    <h2>Animated - via JavaScript</h2>
+    <ul class="process-steps" data-steps="5" id="processAnimated2">
+        <li class="active">
+            <span>1</span>
+        </li>
+        <li>
+            <span>2</span>
+        </li>
+        <li>
+            <span>3</span>
+        </li>
+        <li>
+            <span>4</span>
+        </li>
+        <li>
+            <span>5</span>
+        </li>
+    </ul>
+    <button id="nextStep">Simulate Next Step</button>
+    <script type="text/javascript" src="demo.js"></script>
+</body>
+</html>

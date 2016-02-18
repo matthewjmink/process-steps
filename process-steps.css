@@ -4,16 +4,22 @@
  * Copyright 2016 Matt Mink
  * Licensed under MIT (https://github.com/matthewjmink/process-steps/blob/master/LICENSE)
  */
+.process-steps {
+    height: 63px;
+    margin-bottom:2em;
+    font-family: 'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+.process-steps * {
+    box-sizing: border-box;
+}
 .process-steps,
 .process-steps li {
     list-style:none;
     margin:0;
     padding:0;
     width:100%;
-}
-.process-steps {
-    height: 63px;
-    margin-bottom:2em;
 }
 .process-steps:before,
 .process-steps:after {
@@ -49,7 +55,7 @@
 .process-steps li.active:after{
     width:0%;
 }
-.process-steps li.active.pre-animate:after{
+.process-steps li.active.animate:after{
     width:200%;
 }
 .process-steps li:first-child:before,
@@ -64,7 +70,7 @@
     transition: all .75s linear;
 }
 .process-steps li > span,
-.process-steps li.active.pre-animate > span {
+.process-steps li.active.animate > span {
     display:inline-block;
     width:40px;
     background:#b4b4b4;
@@ -83,7 +89,7 @@
     z-index:1;
 }
 .process-steps li.active > span,
-.process-steps li.previous.pre-animate > span{
+.process-steps li.previous.animate > span{
     background:#149940;
     color:#fff;
     width:63px;
@@ -102,7 +108,7 @@
     margin-left: 9.8%;
 }
 .process-steps[data-steps="6"] li:before,
-.process-steps[data-steps="6"] li.active.pre-animate:after{
+.process-steps[data-steps="6"] li.active.animate:after{
     width:215.294117647059%;
 }
 .process-steps[data-steps="5"] li{
@@ -110,7 +116,7 @@
     margin-left: 14.375%;
 }
 .process-steps[data-steps="5"] li:before,
-.process-steps[data-steps="5"] li.active.pre-animate:after{
+.process-steps[data-steps="5"] li.active.animate:after{
     width:269.117647058824%;
 }
 .process-steps[data-steps="4"] li{
@@ -118,7 +124,7 @@
     margin-left: 22%;
 }
 .process-steps[data-steps="4"] li:before,
-.process-steps[data-steps="4"] li.active.pre-animate:after{
+.process-steps[data-steps="4"] li.active.animate:after{
     width:358.823529411765%;
 }
 .process-steps[data-steps="3"] li{
@@ -126,7 +132,7 @@
     margin-left: 37.25%;
 }
 .process-steps[data-steps="3"] li:before,
-.process-steps[data-steps="3"] li.active.pre-animate:after{
+.process-steps[data-steps="3"] li.active.animate:after{
     width:538.235294117647%;
 }
 .process-steps[data-steps="2"] li{
@@ -134,7 +140,7 @@
     margin-left: 83%;
 }
 .process-steps[data-steps="2"] li:before,
-.process-steps[data-steps="2"] li.active.pre-animate:after{
+.process-steps[data-steps="2"] li.active.animate:after{
     width:1076.47058823529%;
 }
 /* Mobile */
@@ -144,7 +150,7 @@
         margin-left: 2%;
     }
     .process-steps[data-steps="6"] li:before,
-    .process-steps[data-steps="6"] li.active.pre-animate:after{
+    .process-steps[data-steps="6"] li.active.animate:after{
         width:113.333333333333%;
     }
     .process-steps[data-steps="5"] li{
@@ -152,7 +158,7 @@
         margin-left: 6.25%;
     }
     .process-steps[data-steps="5"] li:before,
-    .process-steps[data-steps="5"] li.active.pre-animate:after{
+    .process-steps[data-steps="5"] li.active.animate:after{
         width:141.666666666667%;
     }
     .process-steps[data-steps="4"] li{
@@ -160,7 +166,7 @@
         margin-left: 13.3333333333333%;
     }
     .process-steps[data-steps="4"] li:before,
-    .process-steps[data-steps="4"] li.active.pre-animate:after{
+    .process-steps[data-steps="4"] li.active.animate:after{
         width:188.888888888889%;
     }
     .process-steps[data-steps="3"] li{
@@ -168,7 +174,7 @@
         margin-left: 27.5%;
     }
     .process-steps[data-steps="3"] li:before,
-    .process-steps[data-steps="3"] li.active.pre-animate:after{
+    .process-steps[data-steps="3"] li.active.animate:after{
         width:283.333333333333%;
     }
     .process-steps[data-steps="2"] li{
@@ -176,11 +182,11 @@
         margin-left: 70%;
     }
     .process-steps[data-steps="2"] li:before,
-    .process-steps[data-steps="2"] li.active.pre-animate:after{
+    .process-steps[data-steps="2"] li.active.animate:after{
         width:566.666666666667%;
     }
     .process-steps li > span,
-    .process-steps li.active.pre-animate > span {
+    .process-steps li.active.animate > span {
         width: 34px;
         height: 34px;
         font-size: 22px;
@@ -188,7 +194,7 @@
         top: -17px;
     }
     .process-steps li.active > span,
-    .process-steps li.previous.pre-animate > span {
+    .process-steps li.previous.animate > span {
         width: 46px;
         height: 46px;
         top: -23px;
@@ -196,7 +202,7 @@
         font-size: 2.6em;
     }
     .process-steps li:before,
-    .process-steps li.active.pre-animate:after {
+    .process-steps li.active.animate:after {
         width: 100%;
     }
     .process-steps li.active:after {
